@@ -4,6 +4,8 @@ namespace SimpleLibrary.Domain.Entities;
 
 public class Book : Entity
 {
+    protected Book() { /* Required by EF */ }
+
     public Book(string title, DateTime publishDate, string iSBN, string edition, List<Author> authors, Guid idPublishingCompany, PublishingCompany publishingCompany)
     {
         Title = title;

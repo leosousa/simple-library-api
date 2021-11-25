@@ -4,6 +4,8 @@ namespace SimpleLibrary.Domain.Entities;
 
 public class PublishingCompany : Entity
 {
+    protected PublishingCompany() { /* Required by EF */ }
+
     public PublishingCompany(string name, string cnpj)
     {
         Name = name;

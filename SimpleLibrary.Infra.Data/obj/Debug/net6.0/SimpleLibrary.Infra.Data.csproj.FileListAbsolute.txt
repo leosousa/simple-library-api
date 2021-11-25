@@ -1,0 +1,15 @@
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\bin\Debug\net6.0\SimpleLibrary.Infra.Data.deps.json
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\bin\Debug\net6.0\SimpleLibrary.Infra.Data.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\bin\Debug\net6.0\ref\SimpleLibrary.Infra.Data.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\bin\Debug\net6.0\SimpleLibrary.Infra.Data.pdb
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\bin\Debug\net6.0\SimpleLibrary.Domain.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\bin\Debug\net6.0\SimpleLibrary.Domain.pdb
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.csproj.AssemblyReference.cache
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.AssemblyInfoInputs.cache
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.AssemblyInfo.cs
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.csproj.CoreCompileInputs.cache
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.csproj.CopyComplete
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\ref\SimpleLibrary.Infra.Data.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Infra.Data\obj\Debug\net6.0\SimpleLibrary.Infra.Data.pdb

@@ -1,0 +1,12 @@
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\bin\Debug\net6.0\SimpleLibrary.Domain.deps.json
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\bin\Debug\net6.0\SimpleLibrary.Domain.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\bin\Debug\net6.0\ref\SimpleLibrary.Domain.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\bin\Debug\net6.0\SimpleLibrary.Domain.pdb
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.csproj.AssemblyReference.cache
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.AssemblyInfoInputs.cache
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.AssemblyInfo.cs
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.csproj.CoreCompileInputs.cache
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\ref\SimpleLibrary.Domain.dll
+D:\lfurtado\LAFS\p\_Lab\simple-library-api\SimpleLibrary.Domain\obj\Debug\net6.0\SimpleLibrary.Domain.pdb

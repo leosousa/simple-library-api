@@ -4,8 +4,15 @@ namespace SimpleLibrary.Domain.Entities;
 
 public class Author : Entity
 {
-    public string Name { get; set; }
-    public string Bio { get; set; }
+    public Author(string name, string bio)
+    {
+        Name = name;
+        Bio = bio;
+    }
 
-    public List<Book> Books { get; set; }
+    protected Author() { /* Required by EF */ }
+
+    public string Name { get; private set; }
+    public string Bio { get; private set; }
+    public List<Book> Books { get; private set; }
 }
