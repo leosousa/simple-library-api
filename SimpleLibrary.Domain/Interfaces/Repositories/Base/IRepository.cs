@@ -7,7 +7,7 @@ public interface IRepository<TEntity> where TEntity : Entity
 {
     void Create(TEntity entity);
     void CreateAll(IEnumerable<TEntity> entities);
-    TEntity? GetById(long id);
+    TEntity? GetById(Guid id);
     TEntity? Get(Expression<Func<TEntity, bool>> filter);
     IEnumerable<TEntity> List();
     IEnumerable<TEntity> Search(Expression<Func<TEntity, bool>> filters);
@@ -20,5 +20,6 @@ public interface IRepository<TEntity> where TEntity : Entity
     void Update(TEntity entity);
     void UpdateAll(IEnumerable<TEntity> entities);
     void Remove(TEntity entity);
+    void Remove(Guid id);
     void RemoveAll(IEnumerable<TEntity> entities);
 }

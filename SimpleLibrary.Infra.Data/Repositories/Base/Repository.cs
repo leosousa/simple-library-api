@@ -43,7 +43,7 @@ public class Repository<TDatabaseContext, TEntity> : IRepository<TEntity>
         return _database.Set<TEntity>().FirstOrDefault(filter);
     }
 
-    public virtual TEntity? GetById(long id)
+    public virtual TEntity? GetById(Guid id)
     {
         return _database.Set<TEntity>().Find(id);
     }
@@ -67,6 +67,15 @@ public class Repository<TDatabaseContext, TEntity> : IRepository<TEntity>
     {
         _database.Set<TEntity>().Remove(entity);
         _database.SaveChanges();
+    }
+
+    public void Remove(Guid id)
+    {
+        var entityToRemove = GetById(id);
+        if (entityToRemove != null)
+        {
+            Remove(entityToRemove);
+        }
     }
 
     public virtual void RemoveAll(IEnumerable<TEntity> entities)
