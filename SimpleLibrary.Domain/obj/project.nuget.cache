@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eLDabRnMwk+EWGqRDs2IrXkScLNTecdyxQB7zvoOVCdq3hk86+y07AVVidK0/Sn0ne3/cUTs5e9LZHNK07UBuQ==",
+  "dgSpecHash": "4vYr11w+VeIh63V9m5ZSgwbU9OQ6cYIoeUnz2Nv2HACxF+IS0NGqjoWK92LxJLnHMimJa57A8n/bswqUm6D2qw==",
   "success": true,
   "projectFilePath": "D:\\lfurtado\\LAFS\\p\\_Lab\\simple-library-api\\SimpleLibrary.Domain\\SimpleLibrary.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lfurtado\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
+    "C:\\Users\\lfurtado\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\lfurtado\\.nuget\\packages\\netdevpack\\5.3.2\\netdevpack.5.3.2.nupkg.sha512"
+  ],
   "logs": []
 }
