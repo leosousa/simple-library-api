@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SimpleLibrary.Domain.Shared.Events;
+using SimpleLibrary.Infra.Data.Mappings;
 
 namespace SimpleLibrary.Infra.Data.Contexts;
 

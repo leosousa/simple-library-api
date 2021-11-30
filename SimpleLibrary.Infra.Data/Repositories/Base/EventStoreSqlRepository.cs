@@ -1,4 +1,5 @@
-﻿using SimpleLibrary.Domain.Interfaces.Repositories.Base;
+﻿using Microsoft.EntityFrameworkCore;
+using SimpleLibrary.Domain.Interfaces.Repositories.Base;
 using SimpleLibrary.Domain.Shared.Events;
 using SimpleLibrary.Infra.Data.Contexts;
 
