@@ -1,11 +1,12 @@
-﻿using SimpleLibrary.Domain.Entities.Base;
+﻿using NetDevPack.Domain;
 
 namespace SimpleLibrary.Domain.Entities;
 
-public class Author : Entity
+public class Author : Entity, IAggregateRoot
 {
-    public Author(string name, string bio)
+    public Author(Guid id, string name, string bio)
     {
+        Id = Id;
         Name = name;
         Bio = bio;
     }

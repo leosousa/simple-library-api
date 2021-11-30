@@ -12,8 +12,6 @@ public class AuthorMap : IEntityTypeConfiguration<Author>
 
 		builder.Property(c => c.Name).HasMaxLength(100).IsRequired(true);
 		builder.Property(c => c.Bio).HasMaxLength(500).IsRequired(true);
-		builder.Property(c => c.CreatedAt).IsRequired(true);
-		builder.Property(c => c.UpdatedAt).IsRequired(true);
 
 		builder.HasMany(s => s.Books)
 			  .WithMany(g => g.Authors);

@@ -13,8 +13,6 @@ public class BookMap : IEntityTypeConfiguration<Book>
 		builder.Property(c => c.Title).HasMaxLength(100).IsRequired(true);
 		builder.Property(c => c.ISBN).HasMaxLength(50).IsRequired(true);
 		builder.Property(c => c.Edition).HasMaxLength(100).IsRequired(true);
-		builder.Property(c => c.CreatedAt).IsRequired(true);
-		builder.Property(c => c.UpdatedAt).IsRequired(true);
 
 		builder.HasMany(s => s.Authors)
 			  .WithMany(g => g.Books);

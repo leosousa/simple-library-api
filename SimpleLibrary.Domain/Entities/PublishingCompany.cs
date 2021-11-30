@@ -1,13 +1,15 @@
-﻿using SimpleLibrary.Domain.Entities.Base;
+﻿
+using NetDevPack.Domain;
 
 namespace SimpleLibrary.Domain.Entities;
 
-public class PublishingCompany : Entity
+public class PublishingCompany : Entity, IAggregateRoot
 {
     protected PublishingCompany() { /* Required by EF */ }
 
-    public PublishingCompany(string name, string cnpj)
+    public PublishingCompany(Guid id, string name, string cnpj)
     {
+        Id = id;
         Name = name;
         CNPJ = cnpj;
     }

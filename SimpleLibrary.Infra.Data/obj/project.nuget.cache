@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pEXEYoupB4ML0cP55koAd10DI7tpxOeBFpJ3ZgNgLkyjT9YcqqkGbdwvWXOczorligKCg6NC2/JBH3+U9b98SA==",
+  "dgSpecHash": "2ryBxt0MrDTWezqepg/Ofo75XR6oLHyN8o5I8Dey6nb5PnCbVFiYVdJuK6cuv+9vyIJtZCdJjLGbnTR+Dyg9yw==",
   "success": true,
   "projectFilePath": "D:\\lfurtado\\LAFS\\p\\_Lab\\simple-library-api\\SimpleLibrary.Infra.Data\\SimpleLibrary.Infra.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lfurtado\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
+    "C:\\Users\\lfurtado\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -36,6 +38,7 @@
     "C:\\Users\\lfurtado\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\lfurtado\\.nuget\\packages\\netdevpack\\5.3.2\\netdevpack.5.3.2.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\lfurtado\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

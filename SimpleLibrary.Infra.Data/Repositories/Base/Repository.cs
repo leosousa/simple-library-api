@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SimpleLibrary.Domain.Entities.Base;
+using NetDevPack.Domain;
 using SimpleLibrary.Domain.Interfaces.Repositories.Base;
 using SimpleLibrary.Infra.Data.Contexts;
 using System.Linq.Expressions;

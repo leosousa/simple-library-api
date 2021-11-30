@@ -1,26 +1,24 @@
-﻿using SimpleLibrary.Domain.Entities.Base;
+﻿using NetDevPack.Domain;
 
 namespace SimpleLibrary.Domain.Entities;
 
-public class Book : Entity
+public class Book : Entity, IAggregateRoot
 {
     protected Book() { /* Required by EF */ }
 
-    public Book(string title, DateTime publishDate, string iSBN, string edition, List<Author> authors, Guid idPublishingCompany, PublishingCompany publishingCompany)
+    public Book(Guid id, string title, DateTime publishDate, string isbn, int edition)
     {
+        Id = id;
         Title = title;
         PublishDate = publishDate;
-        ISBN = iSBN;
+        ISBN = isbn;
         Edition = edition;
-        Authors = authors;
-        IdPublishingCompany = idPublishingCompany;
-        PublishingCompany = publishingCompany;
     }
 
     public string Title { get; private set; }
     public DateTime PublishDate { get; private set; }
     public string ISBN { get; private set; }
-    public string Edition { get; private set; }
+    public int Edition { get; private set; }
 
     public List<Author> Authors { get; private set; }
 

@@ -1,4 +1,4 @@
-﻿using SimpleLibrary.Domain.Entities.Base;
+﻿using NetDevPack.Domain;
 using System.Linq.Expressions;
 
 namespace SimpleLibrary.Domain.Interfaces.Repositories.Base;

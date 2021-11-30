@@ -12,8 +12,6 @@ public class PublishingCompanyMap : IEntityTypeConfiguration<PublishingCompany>
 
 		builder.Property(c => c.Name).HasMaxLength(100).IsRequired(true);
 		builder.Property(c => c.CNPJ).HasMaxLength(14).IsRequired(true);
-		builder.Property(c => c.CreatedAt).IsRequired(true);
-		builder.Property(c => c.UpdatedAt).IsRequired(true);
 
 		builder.ToTable("PublishingCompany");
 	}

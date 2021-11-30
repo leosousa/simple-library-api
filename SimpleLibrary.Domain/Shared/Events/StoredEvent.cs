@@ -13,8 +13,7 @@ public class StoredEvent : Event
         User = user;
     }
 
-    // EF Constructor
-    protected StoredEvent() { }
+    protected StoredEvent() { /* Required by EF */ }
 
     public Guid Id { get; private set; }
 
