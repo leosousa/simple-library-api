@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - Bus", "3.2 - Bus", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLibrary.Infra.Bus", "SimpleLibrary.Infra.Bus\SimpleLibrary.Infra.Bus.csproj", "{7D5B2575-9EB5-4060-980C-E8694D9B0E7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLibrary.API", "SimpleLibrary.API\SimpleLibrary.API.csproj", "{EB7AE414-0F6A-4EAA-8D5E-F406A5252C9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7D5B2575-9EB5-4060-980C-E8694D9B0E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D5B2575-9EB5-4060-980C-E8694D9B0E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D5B2575-9EB5-4060-980C-E8694D9B0E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB7AE414-0F6A-4EAA-8D5E-F406A5252C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB7AE414-0F6A-4EAA-8D5E-F406A5252C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB7AE414-0F6A-4EAA-8D5E-F406A5252C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB7AE414-0F6A-4EAA-8D5E-F406A5252C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{6CBCB3F3-BC61-4959-AD1A-840BEE388A15} = {851868A4-A1DF-4343-B82A-56AB206AA010}
 		{DE930232-B4D7-488D-A0ED-3F372046C552} = {D87726B0-A9A0-403C-8390-4D4DF8B72DBE}
 		{7D5B2575-9EB5-4060-980C-E8694D9B0E7D} = {DE930232-B4D7-488D-A0ED-3F372046C552}
+		{EB7AE414-0F6A-4EAA-8D5E-F406A5252C9F} = {216CE916-444B-4465-B52D-E7C57B30B114}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB53423A-5F1D-4D5C-8EEC-DD6F0FF54C87}
