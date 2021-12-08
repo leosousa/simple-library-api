@@ -5,4 +5,5 @@ namespace SimpleLibrary.Domain.Interfaces.Repositories;
 
 public interface IBookRepository : IRepository<Book>
 {
+    Task<Book> GetByIsbn(string isbn);
 }
