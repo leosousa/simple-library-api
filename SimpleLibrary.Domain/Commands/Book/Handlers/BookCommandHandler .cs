@@ -7,7 +7,8 @@ using SimpleLibrary.Domain.Interfaces.Repositories;
 namespace SimpleLibrary.Domain.Commands.Book.Handlers;
 
 public class BookCommandHandler : CommandHandler,
-        IRequestHandler<RegisterNewBookCommand, ValidationResult>
+        IRequestHandler<RegisterNewBookCommand, ValidationResult>,
+        IRequestHandler<UpdateBookCommand, ValidationResult>
 {
     private readonly IBookRepository _bookRepository;
 
@@ -36,28 +37,29 @@ public class BookCommandHandler : CommandHandler,
         return null;
     }
 
-    //public async Task<ValidationResult> Handle(UpdateCustomerCommand message, CancellationToken cancellationToken)
-    //{
-    //    if (!message.IsValid()) return message.ValidationResult;
+    public async Task<ValidationResult> Handle(UpdateBookCommand message, CancellationToken cancellationToken)
+    {
+        //if (!message.IsValid()) return message.ValidationResult;
 
-    //    var customer = new Customer(message.Id, message.Name, message.Email, message.BirthDate);
-    //    var existingCustomer = await _bookRepository.GetByEmail(customer.Email);
+        //var customer = new Entities.Book(message.Id, message.Title, message.PublishDate, message.ISBN, message.Edition);
+        //var existingCustomer = await _bookRepository.GetByEmail(customer.Email);
 
-    //    if (existingCustomer != null && existingCustomer.Id != customer.Id)
-    //    {
-    //        if (!existingCustomer.Equals(customer))
-    //        {
-    //            AddError("The customer e-mail has already been taken.");
-    //            return ValidationResult;
-    //        }
-    //    }
+        //if (existingCustomer != null && existingCustomer.Id != customer.Id)
+        //{
+        //    if (!existingCustomer.Equals(customer))
+        //    {
+        //        AddError("The customer e-mail has already been taken.");
+        //        return ValidationResult;
+        //    }
+        //}
 
-    //    customer.AddDomainEvent(new CustomerUpdatedEvent(customer.Id, customer.Name, customer.Email, customer.BirthDate));
+        //customer.AddDomainEvent(new CustomerUpdatedEvent(customer.Id, customer.Name, customer.Email, customer.BirthDate));
 
-    //    _bookRepository.Update(customer);
+        //_bookRepository.Update(customer);
 
-    //    return await Commit(_bookRepository.UnitOfWork);
-    //}
+        //return await Commit(_bookRepository.UnitOfWork);
+        return null;
+    }
 
     //public async Task<ValidationResult> Handle(RemoveCustomerCommand message, CancellationToken cancellationToken)
     //{

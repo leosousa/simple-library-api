@@ -9,6 +9,7 @@ namespace SimpleLibrary.Domain.Commands.Book;
 
 public abstract class BookCommand : Command
 {
+    public Guid Id { get; protected set; }
     public string Title { get; protected set; }
     public DateTime PublishDate { get; protected set; }
     public string ISBN { get; protected set; }

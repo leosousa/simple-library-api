@@ -4,6 +4,12 @@ namespace SimpleLibrary.Domain.Commands.Book.Validations;
 
 public class BookValidation<TCommand> : AbstractValidator<TCommand> where TCommand : BookCommand
 {
+    protected void ValidateId()
+    {
+        RuleFor(c => c.Id)
+            .NotEqual(Guid.Empty);
+    }
+
     protected void ValidateTitle()
     {
         RuleFor(c => c.Title)
