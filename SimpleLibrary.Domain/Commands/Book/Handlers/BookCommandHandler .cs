@@ -7,8 +7,9 @@ using SimpleLibrary.Domain.Interfaces.Repositories;
 namespace SimpleLibrary.Domain.Commands.Book.Handlers;
 
 public class BookCommandHandler : CommandHandler,
-        IRequestHandler<RegisterNewBookCommand, ValidationResult>,
-        IRequestHandler<UpdateBookCommand, ValidationResult>
+    IRequestHandler<RegisterNewBookCommand, ValidationResult>,
+    IRequestHandler<UpdateBookCommand, ValidationResult>,
+    IRequestHandler<RemoveBookCommand, ValidationResult>
 {
     private readonly IBookRepository _bookRepository;
 
@@ -61,24 +62,25 @@ public class BookCommandHandler : CommandHandler,
         return null;
     }
 
-    //public async Task<ValidationResult> Handle(RemoveCustomerCommand message, CancellationToken cancellationToken)
-    //{
-    //    if (!message.IsValid()) return message.ValidationResult;
+    public async Task<ValidationResult> Handle(RemoveBookCommand message, CancellationToken cancellationToken)
+    {
+        if (!message.IsValid()) return message.ValidationResult;
 
-    //    var customer = await _bookRepository.GetById(message.Id);
+        var book = _bookRepository.GetById(message.Id);
 
-    //    if (customer is null)
-    //    {
-    //        AddError("The customer doesn't exists.");
-    //        return ValidationResult;
-    //    }
+        if (book is null)
+        {
+            AddError("The book doesn't exists.");
+            return ValidationResult;
+        }
 
-    //    customer.AddDomainEvent(new CustomerRemovedEvent(message.Id));
+        book.AddDomainEvent(new BookRemovedEvent(message.Id));
 
-    //    _bookRepository.Remove(customer);
+        _bookRepository.Remove(book);
 
-    //    return await Commit(_bookRepository.UnitOfWork);
-    //}
+        //return await Commit(_bookRepository.UnitOfWork);
+        return null;
+    }
 
     //public void Dispose()
     //{
