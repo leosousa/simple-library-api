@@ -39,23 +39,23 @@ public class BookCommandHandler : CommandHandler,
 
     public async Task<ValidationResult> Handle(UpdateBookCommand message, CancellationToken cancellationToken)
     {
-        //if (!message.IsValid()) return message.ValidationResult;
+        if (!message.IsValid()) return message.ValidationResult;
 
-        //var customer = new Entities.Book(message.Id, message.Title, message.PublishDate, message.ISBN, message.Edition);
-        //var existingCustomer = await _bookRepository.GetByEmail(customer.Email);
+        var book = new Entities.Book(message.Id, message.Title, message.PublishDate, message.ISBN, message.Edition);
+        var existingBook = await _bookRepository.GetByIsbn(book.ISBN);
 
-        //if (existingCustomer != null && existingCustomer.Id != customer.Id)
-        //{
-        //    if (!existingCustomer.Equals(customer))
-        //    {
-        //        AddError("The customer e-mail has already been taken.");
-        //        return ValidationResult;
-        //    }
-        //}
+        if (existingBook != null && existingBook.Id != book.Id)
+        {
+            if (!existingBook.Equals(book))
+            {
+                AddError("The book ISBN has already been taken.");
+                return ValidationResult;
+            }
+        }
 
-        //customer.AddDomainEvent(new CustomerUpdatedEvent(customer.Id, customer.Name, customer.Email, customer.BirthDate));
+        book.AddDomainEvent(new BookUpdatedEvent(book.Id, book.Title, book.PublishDate, book.ISBN, book.Edition));
 
-        //_bookRepository.Update(customer);
+        _bookRepository.Update(book);
 
         //return await Commit(_bookRepository.UnitOfWork);
         return null;
