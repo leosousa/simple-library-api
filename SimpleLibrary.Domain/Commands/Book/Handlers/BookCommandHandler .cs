@@ -24,7 +24,7 @@ public class BookCommandHandler : CommandHandler,
 
         var book = new Entities.Book(Guid.NewGuid(), message.Title, message.PublishDate, message.ISBN, message.Edition);
 
-        if (_bookRepository.Get(b => b.ISBN == message.ISBN) != null)
+        if (_bookRepository.GetByIsbn(message.ISBN) != null)
         {
             AddError("O livro já está cadastrado.");
             return ValidationResult;
@@ -32,10 +32,9 @@ public class BookCommandHandler : CommandHandler,
 
         book.AddDomainEvent(new BookRegisteredEvent(book.Id, book.Title, book.PublishDate, book.ISBN, book.Edition));
 
-        _bookRepository.Create(book);
+        _bookRepository.Add(book);
 
-        //return await Commit(_bookRepository.UnitOfWork);
-        return null;
+        return await Commit(_bookRepository.UnitOfWork);
     }
 
     public async Task<ValidationResult> Handle(UpdateBookCommand message, CancellationToken cancellationToken)
@@ -58,15 +57,14 @@ public class BookCommandHandler : CommandHandler,
 
         _bookRepository.Update(book);
 
-        //return await Commit(_bookRepository.UnitOfWork);
-        return null;
+        return await Commit(_bookRepository.UnitOfWork);
     }
 
     public async Task<ValidationResult> Handle(RemoveBookCommand message, CancellationToken cancellationToken)
     {
         if (!message.IsValid()) return message.ValidationResult;
 
-        var book = _bookRepository.GetById(message.Id);
+        var book = await _bookRepository.GetById(message.Id);
 
         if (book is null)
         {
@@ -78,12 +76,11 @@ public class BookCommandHandler : CommandHandler,
 
         _bookRepository.Remove(book);
 
-        //return await Commit(_bookRepository.UnitOfWork);
-        return null;
+        return await Commit(_bookRepository.UnitOfWork);
     }
 
-    //public void Dispose()
-    //{
-    //    _bookRepository.Dispose();
-    //}
+    public void Dispose()
+    {
+        _bookRepository.Dispose();
+    }
 }

@@ -1,5 +1,5 @@
-﻿using SimpleLibrary.Domain.Entities;
-using SimpleLibrary.Domain.Interfaces.Repositories.Base;
+﻿using NetDevPack.Data;
+using SimpleLibrary.Domain.Entities;
 
 namespace SimpleLibrary.Domain.Interfaces.Repositories;
 
