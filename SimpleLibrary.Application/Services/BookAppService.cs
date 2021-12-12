@@ -38,6 +38,11 @@ public class BookAppService : IBookAppService
         return _mapper.Map<IEnumerable<BookViewModel>>(await _bookRepository.GetAll());
     }
 
+    public async Task<BookViewModel> GetById(Guid id)
+    {
+        return _mapper.Map<BookViewModel>(await _bookRepository.GetById(id));
+    }
+
     public void Dispose()
     {
         GC.SuppressFinalize(this);

@@ -29,4 +29,11 @@ public class BookController : ApiController
     {
         return await _bookAppService.GetAll();
     }
+
+    [AllowAnonymous]
+    [HttpGet("book/{id:guid}")]
+    public async Task<BookViewModel> Get(Guid id)
+    {
+        return await _bookAppService.GetById(id);
+    }
 }
