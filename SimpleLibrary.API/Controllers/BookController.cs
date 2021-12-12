@@ -16,7 +16,7 @@ public class BookController : ApiController
     }
 
     [CustomAuthorize("Customers", "Write")]
-    [HttpPost("customer-management")]
+    [HttpPost("books")]
     public async Task<IActionResult> Post([FromBody] BookViewModel bookViewModel)
     {
         return !ModelState.IsValid ? CustomResponse(ModelState) : CustomResponse(await _bookAppService.Register(bookViewModel));
