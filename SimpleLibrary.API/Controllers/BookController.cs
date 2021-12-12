@@ -43,4 +43,11 @@ public class BookController : ApiController
     {
         return !ModelState.IsValid ? CustomResponse(ModelState) : CustomResponse(await _bookAppService.Update(bookViewModel));
     }
+
+    [CustomAuthorize("Customers", "Remove")]
+    [HttpDelete("book")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return CustomResponse(await _bookAppService.Remove(id));
+    }
 }

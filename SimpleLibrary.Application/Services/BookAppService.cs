@@ -49,6 +49,12 @@ public class BookAppService : IBookAppService
         return await _mediator.SendCommand(updateCommand);
     }
 
+    public async Task<ValidationResult> Remove(Guid id)
+    {
+        var removeCommand = new RemoveBookCommand(id);
+        return await _mediator.SendCommand(removeCommand);
+    }
+
     public void Dispose()
     {
         GC.SuppressFinalize(this);
