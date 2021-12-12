@@ -43,6 +43,12 @@ public class BookAppService : IBookAppService
         return _mapper.Map<BookViewModel>(await _bookRepository.GetById(id));
     }
 
+    public async Task<ValidationResult> Update(BookViewModel bookViewModel)
+    {
+        var updateCommand = _mapper.Map<UpdateBookCommand>(bookViewModel);
+        return await _mediator.SendCommand(updateCommand);
+    }
+
     public void Dispose()
     {
         GC.SuppressFinalize(this);

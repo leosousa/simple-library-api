@@ -36,4 +36,11 @@ public class BookController : ApiController
     {
         return await _bookAppService.GetById(id);
     }
+
+    [CustomAuthorize("Customers", "Write")]
+    [HttpPut("book")]
+    public async Task<IActionResult> Put([FromBody] BookViewModel bookViewModel)
+    {
+        return !ModelState.IsValid ? CustomResponse(ModelState) : CustomResponse(await _bookAppService.Update(bookViewModel));
+    }
 }
