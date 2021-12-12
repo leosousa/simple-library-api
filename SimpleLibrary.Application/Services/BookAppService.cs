@@ -33,6 +33,11 @@ public class BookAppService : IBookAppService
         return await _mediator.SendCommand(registerCommand);
     }
 
+    public async Task<IEnumerable<BookViewModel>> GetAll()
+    {
+        return _mapper.Map<IEnumerable<BookViewModel>>(await _bookRepository.GetAll());
+    }
+
     public void Dispose()
     {
         GC.SuppressFinalize(this);

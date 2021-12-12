@@ -6,4 +6,5 @@ namespace SimpleLibrary.Application.Interfaces;
 public interface IBookAppService : IDisposable
 {
     Task<ValidationResult> Register(BookViewModel bookViewModel);
+    Task<IEnumerable<BookViewModel>> GetAll();
 }
