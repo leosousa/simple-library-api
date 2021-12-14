@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation.Results;
 using NetDevPack.Mediator;
+using SimpleLibrary.Application.EventSourcedNormlizers;
 using SimpleLibrary.Application.Interfaces;
 using SimpleLibrary.Application.ViewModels;
 using SimpleLibrary.Domain.Commands.Book;
@@ -54,6 +55,12 @@ public class BookAppService : IBookAppService
         var removeCommand = new RemoveBookCommand(id);
         return await _mediator.SendCommand(removeCommand);
     }
+
+    public async Task<IList<BookHistoryData>> GetAllHistory(Guid id)
+    {
+        return BookHistory.ToJavaScriptCustomerHistory(await _eventStoreRepository.All(id));
+    }
+
 
     public void Dispose()
     {

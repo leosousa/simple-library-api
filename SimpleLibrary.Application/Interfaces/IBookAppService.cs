@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using SimpleLibrary.Application.EventSourcedNormlizers;
 using SimpleLibrary.Application.ViewModels;
 
 namespace SimpleLibrary.Application.Interfaces;
@@ -10,4 +11,5 @@ public interface IBookAppService : IDisposable
     Task<ValidationResult> Remove(Guid id);
     Task<IEnumerable<BookViewModel>> GetAll();
     Task<BookViewModel> GetById(Guid id);
+    Task<IList<BookHistoryData>> GetAllHistory(Guid id);
 }

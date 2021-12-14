@@ -23,15 +23,18 @@ public class BookHistory
                 Id = change.Id == Guid.Empty.ToString() || change.Id == last.Id
                     ? ""
                     : change.Id,
-                Name = string.IsNullOrWhiteSpace(change.Name) || change.Name == last.Name
+                Title = string.IsNullOrWhiteSpace(change.Title) || change.Title == last.Title
                     ? ""
-                    : change.Name,
-                Email = string.IsNullOrWhiteSpace(change.Email) || change.Email == last.Email
+                    : change.Title,
+                PublishDate = string.IsNullOrWhiteSpace(change.PublishDate) || change.PublishDate == last.PublishDate
                     ? ""
-                    : change.Email,
-                BirthDate = string.IsNullOrWhiteSpace(change.BirthDate) || change.BirthDate == last.BirthDate
+                    : change.PublishDate,
+                ISBN = string.IsNullOrWhiteSpace(change.ISBN) || change.ISBN == last.ISBN
                     ? ""
-                    : change.BirthDate.Substring(0, 10),
+                    : change.ISBN,
+                Edition = string.IsNullOrWhiteSpace(change.Edition) || change.Edition == last.Edition
+                    ? ""
+                    : change.Edition,
                 Action = string.IsNullOrWhiteSpace(change.Action) ? "" : change.Action,
                 Timestamp = change.Timestamp,
                 Who = change.Who

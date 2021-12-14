@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NetDevPack.Identity.Authorization;
 using SimpleLibrary.API.Controllers.Base;
+using SimpleLibrary.Application.EventSourcedNormlizers;
 using SimpleLibrary.Application.Interfaces;
 using SimpleLibrary.Application.ViewModels;
 
@@ -49,5 +50,12 @@ public class BookController : ApiController
     public async Task<IActionResult> Delete(Guid id)
     {
         return CustomResponse(await _bookAppService.Remove(id));
+    }
+
+    [AllowAnonymous]
+    [HttpGet("book/history/{id:guid}")]
+    public async Task<IList<BookHistoryData>> History(Guid id)
+    {
+        return await _bookAppService.GetAllHistory(id);
     }
 }
